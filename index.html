@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- KaTeX CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" xintegrity="sha384-n8MV3yEaB+VxYFfAFrgFrgFbXDxYCKhF6w9/VSV0gdc/TjP7WJ" crossorigin="anonymous">
-    <!-- KaTeX JS for rendering -->
+    <!-- KaTeX JS for rendering -->            
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" xintegrity="sha384-EmS/HvS0BlGA+iXpSjL5l3mB1uFhR4sX/Y5L5uGjP5mB0f3h4z" crossorigin="anonymous"></script>
 
     <style>
@@ -469,7 +469,7 @@
         // --- Quiz State Variables ---
         let currentQuestionIndex = 0;
         let shuffledMcqs = [];
-        let timeRemaining = 40;
+        let timeRemaining = 60;
         let selectedOption = null;
         let score = 0;
         let timerInterval;
@@ -538,7 +538,7 @@
         const displayQuestion = () => {
             clearTimeout(feedbackTimeout); // Clear any pending feedback timeout
             clearInterval(timerInterval); // Clear any existing timer
-            timeRemaining = 40; // Reset timer for new question
+            timeRemaining = 60; // Reset timer for new question
             selectedOption = null; // Clear selected option
             nextQuestionBtn.disabled = true; // Disable next button until an option is selected
 
@@ -696,7 +696,7 @@
             score = 0;
             clearInterval(timerInterval);
             clearTimeout(feedbackTimeout); // Clear any pending timeout
-            timeRemaining = 40;
+            timeRemaining = 60;
             selectedOption = null;
             
             // Reset UI to start screen and clear/hide explanation
